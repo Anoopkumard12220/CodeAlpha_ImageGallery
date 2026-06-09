@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminary — Image Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="wordmark">
+        <span class="wordmark-icon">◈</span>
+        <span class="wordmark-text">Luminary</span>
+      </div>
+      <p class="header-tagline">A curated visual archive</p>
+    </div>
+    <div class="header-bg-glow"></div>
+  </header>
+
+  <main class="main-content">
+
+    <section class="hero">
+      <div class="hero-label">Gallery</div>
+      <h1 class="hero-title">
+        Visual<br />
+        <em>Perspectives</em>
+      </h1>
+      <p class="hero-sub">Photography spanning nature, technology, urban life, and architecture — each frame a moment worth holding.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="stat-total">24</span>
+          <span class="stat-label">Images</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Categories</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">4K</span>
+          <span class="stat-label">Resolution</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <div class="filter-track">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="empty-state" id="emptyState">
+        <span class="empty-icon">◈</span>
+        <p>No images in this category</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-frame">
+      <button class="lb-btn lb-close" id="lbClose" aria-label="Close">✕</button>
+      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image">‹</button>
+      <button class="lb-btn lb-next" id="lbNext" aria-label="Next image">›</button>
+      <div class="lb-image-wrap">
+        <img class="lb-image" id="lbImage" src="" alt="" />
+        <div class="lb-loader" id="lbLoader"></div>
+      </div>
+      <div class="lb-meta">
+        <div class="lb-meta-inner">
+          <span class="lb-title" id="lbTitle"></span>
+          <span class="lb-category" id="lbCategory"></span>
+        </div>
+        <span class="lb-counter" id="lbCounter"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-mark">◈ Luminary</span>
+      <span class="footer-sep">—</span>
+      <span class="footer-credit"> Task 1</span>
+      <span class="footer-sep">—</span>
+      <span class="footer-dev">Anoop Dubey</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
